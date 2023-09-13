@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>atividade</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>escolha seu estilo:</h1>
+    <form id="centro"
+     name="selectForm">
+        <p>
+          <label for="tipoMusica">Escolha alguns tipos de música, em seguida, clique no botão abaixo:</label><br>
+          <select id="tipoMusica" name="tipoMusica" multiple="multiple">
+            <option selected="selected">R&B</option>
+            <option>funk</option>
+            <option>trap</option>
+            <option>jazz</option>
+            <option>blues</option>
+            <option>opera</option>
+            <option>new age</option>
+            <option>classico</option>
+            <option>sertanejo</option>
+          </select>
+        </p>
+        <div class="wrap">
+          <button id="btn" class="button">conta</button>
+        </div>
+        <br>
+      </form>
+      
+      <script>
+      function howMany(selectObject) {
+        var numeroSelecionadas = 0;
+        for (var i = 0; i < selectObject.options.length; i++) {
+          if (selectObject.options[i].selected) {
+            numeroSelecionadas++;
+          }
+        }
+        return numeroSelecionadas;
+      }
+      
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", function(){
+        alert('Total de opções selecionadas: ' + howMany(document.selectForm.tipoMusica))
+      });
+      </script>
+</body>
+</html>

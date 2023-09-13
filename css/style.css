@@ -1,0 +1,128 @@
+h1 {
+  color: rgba(255, 255, 255, 0.89);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  font-size: 50px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+form {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 45px;
+  width: 90px;
+}
+
+#centro {
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(25, 20, 122) 0%, rgba(71, 115, 217, 1) 45%, rgba(8, 139, 218, 1) 58%);
+}
+
+select {
+  width: 30%;
+  height: 200px;
+  text-align: center;
+  font-size: medium;
+
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 150px;
+  min-height: 30px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #ebebf1;
+  background: #2d97ee;
+  background: linear-gradient(90deg, rgb(10, 41, 124) 0%, rgb(20, 52, 88) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(69, 143, 255, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  padding: 1px;
+}
+
+button::before {
+  content: '';
+  border-radius: 500px;
+  min-width: calc(150px + 1px);
+  min-height: calc(60px + 1px);
+  border: 6px solid #000000;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+  color: #eeeef5;
+  transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 90%;
+  border: 5px solid #050c0b;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after,
+button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
