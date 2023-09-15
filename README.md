@@ -28,7 +28,7 @@ O site é para você selecionar mais de um tipo de genêro musical e mostrar a q
 
 ## ✒️Autores  
 
-🤍[Maria Fernanda](https://github.com/MaferCastilho) 
+🤍[Maria Fernanda](https://github.com/MaferCastilho)  
 💗[Iris](https://github.com/iriscarolina)  
-❤️Bryan
-🖤Janaina
+❤️Bryan  
+🖤Janaina  
